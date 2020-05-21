@@ -6,14 +6,13 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-udacityproject/app
+dockerpath=frenandi/udacitydevopscourse
 
 # Step 2:  
 # Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
-docker login
-docker tag udacityproject udacityproject
+docker login 
+docker tag udacityproject $dockerpath
 
 # Step 3:
 # Push image to a docker repository
-docker push udacityproject
+docker push $dockerpath
