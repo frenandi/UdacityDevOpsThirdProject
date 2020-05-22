@@ -1,5 +1,5 @@
 # UdacityDevOpsThirdProject
-[![frenandi](https://circleci.com/github/frenandi/UdacityDevOpsThirdProject.svg?style=svg)](https://app.circleci.com/pipelines/github/frenandi/UdacityDevOpsThirdProject/5/workflows/13925123-def7-4504-8755-d84b6ce9d845/jobs/5/steps)
+[![frenandi](https://circleci.com/gh/frenandi/UdacityDevOpsThirdProject.svg?style=svg)](https://github.com/frenandi/UdacityDevOpsThirdProject)
 
 ## Project Overview
 
