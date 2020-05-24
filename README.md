@@ -31,6 +31,9 @@ The following tasks were performed in order to complete the project.
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
+### Running app to make predictions
+1. Run the make_predictions.sh script to make a prediction.
+
 ---
 
 ## Files Included
