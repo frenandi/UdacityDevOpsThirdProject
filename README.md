@@ -1,30 +1,26 @@
 # UdacityDevOpsThirdProject
 [![frenandi](https://circleci.com/gh/frenandi/UdacityDevOpsThirdProject.svg?style=svg)](https://github.com/frenandi/UdacityDevOpsThirdProject)
 
-## Project Overview
+## Summary
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
+In this project, one Machine Learning API to make predictions was deployed using Docker and Kubernetes. Also CircleCI was used for continues integration where Hadolint and Pylint were used to validate Dockerfile and the python application.
 
-You are given a pre-trained, `sklearn` model that has been trained to predict housing prices in Boston according to several features, such as average rooms in a home and data about highway access, teacher-to-pupil ratios, and so on. You can read more about the data, which was initially taken from Kaggle, on [the data source site](https://www.kaggle.com/c/boston-housing). This project tests your ability to operationalize a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. This project could be extended to any pre-trained machine learning model, such as those for image recognition and data labeling.
+The following tasks were performed in order to complete the project.
 
-### Project Tasks
-
-Your project goal is to operationalize this working, machine learning microservice using [kubernetes](https://kubernetes.io/), which is an open-source system for automating the management of containerized applications. In this project you will:
-* Test your project code using linting
-* Complete a Dockerfile to containerize this application
-* Deploy your containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
-
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
+1. Configure CircleCI environment.
+2. Create and activate a Python environment.
+3. Manually Run Lint checks.
+4. Install Minikube to run Kubernetes cluster locally.
+5. Complete Dockerfile to deploy container containing the Python app.
+6. Improve Logging for the Python app.
+7. Upload the Docker image to Docker Hub.
+8. Configure Kubernetes to run locally.
+9. Deploy app with Kubernetes.
+10. Integrate with CircleCI.
 
 ---
 
-## Setup the Environment
+## Instructions to run Python script
 
 * Create a virtualenv and activate it
 * Run `make install` to install the necessary dependencies
@@ -35,9 +31,18 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 2. Run in Docker:  `./run_docker.sh`
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
-### Kubernetes Steps
+---
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+## Files Included
+
+1. .circleci: contains the configuration file to perform the continues integration task using CircleCI tool.
+2. output_txt_files: contains two files
+  a. docker_out.txt: contains the output from the prediction output when the Docker container was running.
+  b. kubernetes_out.txt: contains the output from the prediction output whe the Kubernetes cluster was running.
+3. app.py: contains the script to make the predictions.
+4. Dockerfile: contains the information to build the Docker container for the prediction app.
+5. Makefile: contains a set of insturction to install requirements and lint operations.
+6. requirements.txt: contains the information of all the libraries required by the app.
+7. run_docker.sh: contains the instructions to create Docker container.
+8. upload_docker.sh: contains the instructions to upload the Docker image to DockerHub
+9. run_kubernetes.sh: conatins the instructions to set the Kubernetes cluster.
